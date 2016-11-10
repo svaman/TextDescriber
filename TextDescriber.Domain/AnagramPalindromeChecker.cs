@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TextDescriberDomain
 {
@@ -17,25 +14,22 @@ namespace TextDescriberDomain
             var inputTextWithNoSpaces = inputText.Replace(" ", "");
             var chars = inputTextWithNoSpaces.ToCharArray().ToList();
 
-            var charWithoutPairExists = false;
+            var charWithoutPairAlreadyExists = false;
 
-            var charDictionary = new Dictionary<char, int>();
+            var charDictionary = new List<char>();
             foreach (var character in inputTextWithNoSpaces)
             {
-                if (!charDictionary.ContainsKey(character))
+                if (!charDictionary.Contains(character))
                 {
                     var characterFrequency = chars.FindAll(x => x == character).Count;
-                    charDictionary.Add(character, characterFrequency);
+                    charDictionary.Add(character);
                     if (characterFrequency%2 != 0)
                     {
-                        if (charWithoutPairExists == false)
-                        {
-                            charWithoutPairExists = true;
-                        }
-                        else
+                        if (charWithoutPairAlreadyExists)
                         {
                             return false;
                         }
+                        charWithoutPairAlreadyExists = true;
                     }
                 }
             }
