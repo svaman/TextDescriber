@@ -7,49 +7,49 @@ namespace TextDescriberTests
     public class PalindromeCheckerTests
     {
         [Test]
-        public void Describe_WhenPassedValidPalindrome_ReturnsTrue()
+        public void IsPalindrome_WhenPassedValidPalindrome_ReturnsTrue()
         {
             //Arrange
-            var textDescriber = new PalindromeChecker();
+            var palindromeChecker = new PalindromeChecker();
             var inputString = "anna";
             //Act
-            var actualResult = textDescriber.IsPalindrome(inputString);
+            var actualResult = palindromeChecker.IsPalindrome(inputString);
             //Assert
             Assert.IsTrue(actualResult);
         }
 
         [Test]
-        public void Describe_WhenPassedAllSameLetters_ReturnsTrue()
+        public void IsPalindrome_WhenPassedAllSameLetters_ReturnsTrue()
         {
             //Arrange
-            var textDescriber = new PalindromeChecker();
+            var palindromeChecker = new PalindromeChecker();
             var inputString = "aaaaaaaa";
             //Act
-            var actualResult = textDescriber.IsPalindrome(inputString);
+            var actualResult = palindromeChecker.IsPalindrome(inputString);
             //Assert
             Assert.IsTrue(actualResult);
         }
 
         [Test]
-        public void Describe_WhenPassedNonPalindrome_ReturnsFalse()
+        public void IsPalindrome_WhenPassedNonPalindrome_ReturnsFalse()
         {
             //Arrange
-            var textDescriber = new PalindromeChecker();
+            var palindromeChecker = new PalindromeChecker();
             var inputString = "abca";
             //Act
-            var actualResult = textDescriber.IsPalindrome(inputString);
+            var actualResult = palindromeChecker.IsPalindrome(inputString);
             //Assert
             Assert.IsFalse(actualResult);
         }
 
         [Test]
-        public void Describe_WhenPassedPalindromeWithSpaces_ReturnsTrue()
+        public void IsPalindrome_WhenPassedPalindromeWithSpaces_ReturnsTrue()
         {
             //Arrange
-            var textDescriber = new PalindromeChecker();
+            var palindromeChecker = new PalindromeChecker();
             var inputString = "do not bob to nod";
             //Act
-            var actualResult = textDescriber.IsPalindrome(inputString);
+            var actualResult = palindromeChecker.IsPalindrome(inputString);
             //Assert
             Assert.IsTrue(actualResult);
         }
