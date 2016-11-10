@@ -65,5 +65,17 @@ namespace TextDescriberTests
             //Assert
             Assert.IsTrue(actualResult);
         }
+
+        [Test]
+        public void IsPalindrome_WhenPassedNull_ReturnsFalse()
+        {
+            //Arrange
+            var palindromeChecker = new PalindromeChecker();
+            string inputString = null;
+            //Act
+            var actualResult = palindromeChecker.IsPalindrome(inputString);
+            //Assert
+            Assert.IsFalse(actualResult);
+        }
     }
 }

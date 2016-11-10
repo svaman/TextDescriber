@@ -10,6 +10,10 @@ namespace TextDescriberDomain
     {
         public bool IsAnagramPalindrome(string inputText)
         {
+            if (string.IsNullOrEmpty(inputText))
+            {
+                return false;
+            }
             var chars = inputText.ToCharArray().ToList();
 
             var charWithoutPairExists = false;

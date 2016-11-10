@@ -70,5 +70,18 @@ namespace TextDescriberTests
             //Assert
             Assert.IsTrue(actualResult);
         }
+
+        [Test]
+        public void IsAnagramPalindrome_PassedNull_ReturnsFalse()
+        {
+            //Arrange
+            var anagramPalindromeChecker = new AnagramPalindromeChecker();
+            string inputString = null;
+            //Act
+            var actualResult = anagramPalindromeChecker.IsAnagramPalindrome(inputString);
+            //Assert
+            Assert.IsFalse(actualResult);
+        }
+
     }
 }

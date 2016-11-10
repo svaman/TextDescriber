@@ -7,6 +7,10 @@ namespace TextDescriberDomain
     {
         public bool IsPalindrome(string inputText)
         {
+            if (string.IsNullOrEmpty(inputText))
+            {
+                return false;
+            }
             var inputTextWithNoSpaces = inputText.Replace(" ", "");
             var indexFromStart = 0;
             var indexFromEnd = inputTextWithNoSpaces.Length - 1;
