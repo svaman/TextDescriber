@@ -6,14 +6,21 @@ namespace TextDescriberTests
     [TestFixture]
     public class PalindromeCheckerTests
     {
+        private PalindromeChecker _palindromeChecker;
+
+        [SetUp]
+        public void Setup()
+        {
+            _palindromeChecker = new PalindromeChecker();
+        }
+
         [Test]
         public void IsPalindrome_WhenPassedValidPalindrome_ReturnsTrue()
         {
             //Arrange
-            var palindromeChecker = new PalindromeChecker();
             var inputString = "anna";
             //Act
-            var actualResult = palindromeChecker.IsPalindrome(inputString);
+            var actualResult = _palindromeChecker.IsPalindrome(inputString);
             //Assert
             Assert.IsTrue(actualResult);
         }
@@ -22,10 +29,9 @@ namespace TextDescriberTests
         public void IsPalindrome_WhenPassedAllSameLetters_ReturnsTrue()
         {
             //Arrange
-            var palindromeChecker = new PalindromeChecker();
             var inputString = "aaaaaaaa";
             //Act
-            var actualResult = palindromeChecker.IsPalindrome(inputString);
+            var actualResult = _palindromeChecker.IsPalindrome(inputString);
             //Assert
             Assert.IsTrue(actualResult);
         }
@@ -34,10 +40,9 @@ namespace TextDescriberTests
         public void IsPalindrome_WhenPassedNonPalindrome_ReturnsFalse()
         {
             //Arrange
-            var palindromeChecker = new PalindromeChecker();
             var inputString = "abca";
             //Act
-            var actualResult = palindromeChecker.IsPalindrome(inputString);
+            var actualResult = _palindromeChecker.IsPalindrome(inputString);
             //Assert
             Assert.IsFalse(actualResult);
         }
@@ -46,10 +51,9 @@ namespace TextDescriberTests
         public void IsPalindrome_WhenPassedPalindromeWithNoSpaces_ReturnsTrue()
         {
             //Arrange
-            var palindromeChecker = new PalindromeChecker();
             var inputString = "donotbobtonod";
             //Act
-            var actualResult = palindromeChecker.IsPalindrome(inputString);
+            var actualResult = _palindromeChecker.IsPalindrome(inputString);
             //Assert
             Assert.IsTrue(actualResult);
         }
@@ -58,10 +62,9 @@ namespace TextDescriberTests
         public void IsPalindrome_WhenPassedPalindromeWithSpaces_ReturnsTrue()
         {
             //Arrange
-            var palindromeChecker = new PalindromeChecker();
             var inputString = "do not bob to nod";
             //Act
-            var actualResult = palindromeChecker.IsPalindrome(inputString);
+            var actualResult = _palindromeChecker.IsPalindrome(inputString);
             //Assert
             Assert.IsTrue(actualResult);
         }
@@ -70,10 +73,9 @@ namespace TextDescriberTests
         public void IsPalindrome_WhenPassedNull_ReturnsFalse()
         {
             //Arrange
-            var palindromeChecker = new PalindromeChecker();
             string inputString = null;
             //Act
-            var actualResult = palindromeChecker.IsPalindrome(inputString);
+            var actualResult = _palindromeChecker.IsPalindrome(inputString);
             //Assert
             Assert.IsFalse(actualResult);
         }
