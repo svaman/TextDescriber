@@ -5,9 +5,20 @@ namespace TextDescriberDomain
 {
     public class PalindromeChecker : IPalindromeChecker
     {
-        public bool IsPalindrome(string text)
+        public bool IsPalindrome(string inputText)
         {
-            throw new NotImplementedException();
+            var indexFromStart = 0;
+            var indexFromEnd = inputText.Length - 1;
+            while (indexFromStart < indexFromEnd)
+            {
+                if (inputText[indexFromStart] != inputText[indexFromEnd])
+                {
+                    return false;
+                }
+                indexFromStart++;
+                indexFromEnd--;
+            }
+            return true;
         }
     }
 }

@@ -11,12 +11,11 @@ namespace TextDescriberTests
         {
             //Arrange
             var textDescriber = new PalindromeChecker();
-            var expectedResult = "palindrome";
             var inputString = "anna";
             //Act
             var actualResult = textDescriber.IsPalindrome(inputString);
             //Assert
-            Assert.AreEqual(expectedResult,actualResult);
+            Assert.IsTrue(actualResult);
         }
 
 
