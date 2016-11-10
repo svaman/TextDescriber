@@ -1,8 +1,6 @@
-﻿using TextDescriberDomainInterfaces;
-
-namespace TextDescriberDomain
+﻿namespace TextDescriberDomain
 {
-    public class PalindromeChecker : IPalindromeChecker
+    public class PalindromeChecker
     {
         public bool IsPalindrome(string inputText)
         {

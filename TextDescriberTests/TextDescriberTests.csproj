@@ -52,10 +52,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TextDescriber.DomainInterfaces\TextDescriberDomainInterfaces.csproj">
-      <Project>{BD32E1D4-3F33-4D98-801A-DDD1732B87F2}</Project>
-      <Name>TextDescriberDomainInterfaces</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TextDescriber.Domain\TextDescriberDomain.csproj">
       <Project>{ED232B64-375E-431C-A0D1-DD6AB245BA02}</Project>
       <Name>TextDescriberDomain</Name>

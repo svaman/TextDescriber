@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextDescriberTests", "TextD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextDescriberDomain", "TextDescriber.Domain\TextDescriberDomain.csproj", "{ED232B64-375E-431C-A0D1-DD6AB245BA02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextDescriberDomainInterfaces", "TextDescriber.DomainInterfaces\TextDescriberDomainInterfaces.csproj", "{BD32E1D4-3F33-4D98-801A-DDD1732B87F2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{ED232B64-375E-431C-A0D1-DD6AB245BA02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED232B64-375E-431C-A0D1-DD6AB245BA02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED232B64-375E-431C-A0D1-DD6AB245BA02}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BD32E1D4-3F33-4D98-801A-DDD1732B87F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD32E1D4-3F33-4D98-801A-DDD1732B87F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD32E1D4-3F33-4D98-801A-DDD1732B87F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD32E1D4-3F33-4D98-801A-DDD1732B87F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

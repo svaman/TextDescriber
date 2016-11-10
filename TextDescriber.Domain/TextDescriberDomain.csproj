@@ -44,12 +44,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PalindromeChecker.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TextDescriber.DomainInterfaces\TextDescriberDomainInterfaces.csproj">
-      <Project>{BD32E1D4-3F33-4D98-801A-DDD1732B87F2}</Project>
-      <Name>TextDescriberDomainInterfaces</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
