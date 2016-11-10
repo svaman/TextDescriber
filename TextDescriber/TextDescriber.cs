@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TextDescriber
 {
-    class Program
+    public class TextDescriber
     {
         static void Main(string[] args)
         {
