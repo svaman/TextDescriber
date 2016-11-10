@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using TextDescriberDomain;
 
 namespace TextDescriberTests
@@ -83,5 +78,16 @@ namespace TextDescriberTests
             Assert.IsFalse(actualResult);
         }
 
+        [Test]
+        public void IsAnagramPalindrome_DifferentLettersButOneWithNoMatchAndASpace_ReturnsTrue()
+        {
+            //Arrange
+            var anagramPalindromeChecker = new AnagramPalindromeChecker();
+            var inputString = "igded gide";
+            //Act
+            var actualResult = anagramPalindromeChecker.IsAnagramPalindrome(inputString);
+            //Assert
+            Assert.IsTrue(actualResult);
+        }
     }
 }

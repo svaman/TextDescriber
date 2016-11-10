@@ -14,12 +14,13 @@ namespace TextDescriberDomain
             {
                 return false;
             }
-            var chars = inputText.ToCharArray().ToList();
+            var inputTextWithNoSpaces = inputText.Replace(" ", "");
+            var chars = inputTextWithNoSpaces.ToCharArray().ToList();
 
             var charWithoutPairExists = false;
 
             var charDictionary = new Dictionary<char, int>();
-            foreach (var character in inputText)
+            foreach (var character in inputTextWithNoSpaces)
             {
                 if (!charDictionary.ContainsKey(character))
                 {
