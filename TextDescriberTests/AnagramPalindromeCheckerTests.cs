@@ -35,5 +35,17 @@ namespace TextDescriberTests
             Assert.IsTrue(actualResult);
         }
 
+        [Test]
+        public void IsAnagramPalindrome_WhenPassedMoreThanOneDifferentLetter_ReturnsFalse()
+        {
+            //Arrange
+            var anagramPalindromeChecker = new AnagramPalindromeChecker();
+            var inputString = "caaaaaaaab";
+            //Act
+            var actualResult = anagramPalindromeChecker.IsAnagramPalindrome(inputString);
+            //Assert
+            Assert.IsFalse(actualResult);
+        }
+
     }
 }
