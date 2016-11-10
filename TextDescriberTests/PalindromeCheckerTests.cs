@@ -7,7 +7,7 @@ namespace TextDescriberTests
     public class PalindromeCheckerTests
     {
         [Test]
-        public void Describe_WhenPassedValidPalindrome_ReturnsTextPalindrome()
+        public void Describe_WhenPassedValidPalindrome_ReturnsTrue()
         {
             //Arrange
             var textDescriber = new PalindromeChecker();
@@ -18,6 +18,16 @@ namespace TextDescriberTests
             Assert.IsTrue(actualResult);
         }
 
-
+        [Test]
+        public void Describe_WhenPassedAllSameLetters_ReturnsTrue()
+        {
+            //Arrange
+            var textDescriber = new PalindromeChecker();
+            var inputString = "aaaaaaaa";
+            //Act
+            var actualResult = textDescriber.IsPalindrome(inputString);
+            //Assert
+            Assert.IsTrue(actualResult);
+        }
     }
 }
