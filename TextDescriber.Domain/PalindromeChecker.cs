@@ -7,11 +7,12 @@ namespace TextDescriberDomain
     {
         public bool IsPalindrome(string inputText)
         {
+            var inputTextWithNoSpaces = inputText.Replace(" ", "");
             var indexFromStart = 0;
-            var indexFromEnd = inputText.Length - 1;
+            var indexFromEnd = inputTextWithNoSpaces.Length - 1;
             while (indexFromStart < indexFromEnd)
             {
-                if (inputText[indexFromStart] != inputText[indexFromEnd])
+                if (inputTextWithNoSpaces[indexFromStart] != inputTextWithNoSpaces[indexFromEnd])
                 {
                     return false;
                 }

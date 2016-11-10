@@ -41,5 +41,17 @@ namespace TextDescriberTests
             //Assert
             Assert.IsFalse(actualResult);
         }
+
+        [Test]
+        public void Describe_WhenPassedPalindromeWithSpaces_ReturnsTrue()
+        {
+            //Arrange
+            var textDescriber = new PalindromeChecker();
+            var inputString = "do not bob to nod";
+            //Act
+            var actualResult = textDescriber.IsPalindrome(inputString);
+            //Assert
+            Assert.IsTrue(actualResult);
+        }
     }
 }
