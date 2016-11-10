@@ -47,5 +47,28 @@ namespace TextDescriberTests
             Assert.IsFalse(actualResult);
         }
 
+        [Test]
+        public void IsAnagramPalindrome_WhenPassedManyDifferentLetters_ReturnsFalse()
+        {
+            //Arrange
+            var anagramPalindromeChecker = new AnagramPalindromeChecker();
+            var inputString = "owefhijpfwai";
+            //Act
+            var actualResult = anagramPalindromeChecker.IsAnagramPalindrome(inputString);
+            //Assert
+            Assert.IsFalse(actualResult);
+        }
+
+        [Test]
+        public void IsAnagramPalindrome_DifferentLettersButOneWithNoMatch_ReturnsTrue()
+        {
+            //Arrange
+            var anagramPalindromeChecker = new AnagramPalindromeChecker();
+            var inputString = "igdedgide";
+            //Act
+            var actualResult = anagramPalindromeChecker.IsAnagramPalindrome(inputString);
+            //Assert
+            Assert.IsTrue(actualResult);
+        }
     }
 }

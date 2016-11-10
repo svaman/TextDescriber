@@ -43,6 +43,18 @@ namespace TextDescriberTests
         }
 
         [Test]
+        public void IsPalindrome_WhenPassedPalindromeWithNoSpaces_ReturnsTrue()
+        {
+            //Arrange
+            var palindromeChecker = new PalindromeChecker();
+            var inputString = "donotbobtonod";
+            //Act
+            var actualResult = palindromeChecker.IsPalindrome(inputString);
+            //Assert
+            Assert.IsTrue(actualResult);
+        }
+
+        [Test]
         public void IsPalindrome_WhenPassedPalindromeWithSpaces_ReturnsTrue()
         {
             //Arrange
