@@ -8,10 +8,9 @@ namespace TextDescriber
         static void Main(string[] args)
         {
             Console.WriteLine("Press quit and press enter to quit");
-            var inputText = "";
             while (true)
             {
-                inputText = Console.ReadLine();
+                var inputText = Console.ReadLine();
                 if (inputText == "quit")
                 {
                     return;
@@ -24,7 +23,6 @@ namespace TextDescriber
         private static string GetOutputValue(string inputText)
         {
             var palindromeChecker = new PalindromeChecker();
-
             if (palindromeChecker.IsPalindrome(inputText))
             {
                 return "Palindrome";
