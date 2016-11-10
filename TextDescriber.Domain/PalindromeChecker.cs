@@ -1,5 +1,4 @@
-﻿using System;
-using TextDescriberDomainInterfaces;
+﻿using TextDescriberDomainInterfaces;
 
 namespace TextDescriberDomain
 {
