@@ -11,14 +11,26 @@ namespace TextDescriberTests
     [TestFixture]
     public class AnagramPalindromeCheckerTests
     {
-
-        public void IsAnagramPalindrome_AllCharactersSame_ReturnsTrue()
+        [Test]
+        public void IsAnagramPalindrome_WhenPassedAllCharactersSame_ReturnsTrue()
         {
             //Arrange
-            var textDescriber = new AnagramPalindromeChecker();
+            var anagramPalindromeChecker = new AnagramPalindromeChecker();
             var inputString = "aaaaaaaa";
             //Act
-            var actualResult = textDescriber.IsAnagramPalindrome(inputString);
+            var actualResult = anagramPalindromeChecker.IsAnagramPalindrome(inputString);
+            //Assert
+            Assert.IsTrue(actualResult);
+        }
+
+        [Test]
+        public void IsAnagramPalindrome_WhenPassedSameCharacterEvenTimesAndOneDifferentCharacter_ReturnsTrue()
+        {
+            //Arrange
+            var anagramPalindromeChecker = new AnagramPalindromeChecker();
+            var inputString = "aaaaaaaab";
+            //Act
+            var actualResult = anagramPalindromeChecker.IsAnagramPalindrome(inputString);
             //Assert
             Assert.IsTrue(actualResult);
         }

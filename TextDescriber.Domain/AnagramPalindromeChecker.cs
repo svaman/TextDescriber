@@ -10,7 +10,32 @@ namespace TextDescriberDomain
     {
         public bool IsAnagramPalindrome(string inputText)
         {
-            throw new NotImplementedException();
+            var chars = inputText.ToCharArray().ToList();
+
+            var charWithoutPairExists = false;
+
+            var charDictionary = new Dictionary<char, int>();
+            foreach (var character in inputText)
+            {
+                if (!charDictionary.ContainsKey(character))
+                {
+                    var characterFrequency = chars.FindAll(x => x == character).Count;
+                    charDictionary.Add(character, characterFrequency);
+                    if (characterFrequency%2 != 0)
+                    {
+                        if (charWithoutPairExists == false)
+                        {
+                            charWithoutPairExists = true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+
+            return true;
         }
     }
 }
