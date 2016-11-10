@@ -29,5 +29,17 @@ namespace TextDescriberTests
             //Assert
             Assert.IsTrue(actualResult);
         }
+
+        [Test]
+        public void Describe_WhenPassedNonPalindrome_ReturnsFalse()
+        {
+            //Arrange
+            var textDescriber = new PalindromeChecker();
+            var inputString = "abca";
+            //Act
+            var actualResult = textDescriber.IsPalindrome(inputString);
+            //Assert
+            Assert.IsFalse(actualResult);
+        }
     }
 }
